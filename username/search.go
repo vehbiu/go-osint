@@ -70,7 +70,7 @@ func searchPlatform(username, platform string) *string {
 	case "codeberg":
 		output = searchCodeberg(username)
 	case "codecademy":
-		output = searchCodeCademy(username)
+		output = searchCodecademy(username)
 	case "codechef":
 		output = searchCodeChef(username)
 	case "codepen":

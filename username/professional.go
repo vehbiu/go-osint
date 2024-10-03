@@ -17,12 +17,12 @@ func searchCodeberg(username string) *string {
 	return checkStatusAndReturnUrl("https://codeberg.org/"+username, 200)
 }
 
-func searchCodeCademy(username string) *string {
-	return checkStatusAndReturnUrl("https://www.codecademy.com/profiles/"+username, 200)
+func searchCodecademy(username string) *string {
+	return checkTextAndReturnUrl("https://www.codecademy.com/profiles/"+username, "&#x27;s avatar")
 }
 
 func searchCodeChef(username string) *string {
-	return checkStatusAndReturnUrl("https://www.codechef.com/users/"+username, 200)
+	return checkTextAndReturnUrl("https://www.codechef.com/users/"+username, "alt='user profile'")
 }
 
 func searchCodePen(username string) *string {
