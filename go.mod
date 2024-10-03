@@ -4,6 +4,7 @@ go 1.23.2
 
 require (
 	github.com/fatih/color v1.17.0
+	github.com/likexian/whois v1.15.5
 	golang.org/x/net v0.29.0
 )
 

@@ -8,6 +8,7 @@ A lightweight, efficient OSINT tool built in Go for username and keyword searche
 ## 🌟 Features
 - **Username Search**: Find digital footprints across various platforms
 - **Keyword Discovery**: Uncover URLs related to specific search terms
+- **Domain Search**: Identify platforms associated with a domain
 - **Concurrent Processing**: Leverages Go routines for fast, efficient searches
 - **File Output**: Save search results for later analysis
 - **Platform Specific**: Option to target searches to individual platforms
@@ -48,7 +49,12 @@ go-osint [type] [term] (platform)
    go-osint keywords johndoe.22
    ```
 
-4. **Save Results to File**:
+4. **Domain Search**:
+   ```bash
+    go-osint domain example.com
+    ```
+
+5. **Save Results to File**:
    ```bash
    go-osint username johndoe --output results.txt
    ```
@@ -59,6 +65,7 @@ go-osint/
 ├── main.go           # Entry point
 ├── username/         # Username-specific search functions
 ├── keywords/         # Keyword-specific search functions, (currently only google seearches)
+├── domain/           # Domain-specific search functions
 └── README.md         # Documentation
 ```
 
