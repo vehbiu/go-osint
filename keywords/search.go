@@ -52,6 +52,9 @@ func Search(email string) *[]string {
 				}
 
 				attr.Val = strings.TrimPrefix(attr.Val, "/url?q=")
+				if strings.HasPrefix(attr.Val, "https://accounts.google.com/") || strings.HasPrefix(attr.Val, "https://support.google.com/") {
+					continue
+				}
 				results = append(results, attr.Val)
 				break
 			}

@@ -46,5 +46,5 @@ func searchNpm(username string) *string {
 }
 
 func searchReplit(username string) *string {
-	return checkStatusAndReturnUrl("https://replit.com/@/"+username, 200)
+	return checkStatusAndReturnUrl("https://replit.com/@"+username, 200)
 }

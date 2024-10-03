@@ -9,11 +9,6 @@ import (
 
 func checkStatusAndReturnUrl(url string, intentedStatus int) *string {
 	resp, err := http.Get(url)
-	//client := &http.Client{
-	//	CheckRedirect: func(req *http.Request, via []*http.Request) error {
-	//		return http.ErrUseLastResponse
-	//	},
-	//}
 	if err != nil {
 		return nil
 	}

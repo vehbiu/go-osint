@@ -133,11 +133,11 @@ func searchPlatform(username, platform string) *string {
 func Search(username, platform string) *string {
 	output := searchPlatform(username, platform)
 	if output != nil {
-		fmt.Println(color.GreenString("[✔]"), color.YellowString(platform), *output)
+		fmt.Println(color.GreenString("[OK]"), color.YellowString(platform), *output)
 		return output
 	} else {
 		fmt.Println(
-			color.RedString("[✖]"),
+			color.RedString("[X]"),
 			color.YellowString(platform),
 			"not found",
 		)
@@ -171,10 +171,10 @@ func SearchAll(username string) *[]string {
 	for result := range resultsChan {
 		if result.Output != nil {
 			items = append(items, *result.Output)
-			fmt.Println(color.GreenString("[✔]"), color.YellowString(result.Platform), *result.Output)
+			fmt.Println(color.GreenString("[OK]"), color.YellowString(result.Platform), *result.Output)
 		} else {
 			fmt.Println(
-				color.RedString("[✖]"),
+				color.RedString("[X]"),
 				color.YellowString(result.Platform),
 				"not found",
 			)

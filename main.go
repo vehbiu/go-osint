@@ -52,7 +52,7 @@ func main() {
 		if ptr != nil {
 			urls = append(urls, *ptr...)
 			for i := range urls {
-				color.Green("[✔] Found URL: %s", urls[i])
+				color.Green("[OK] Found URL: %s", urls[i])
 			}
 		}
 
@@ -76,6 +76,6 @@ func main() {
 		for _, url := range urls {
 			_, _ = file.WriteString(url + "\n")
 		}
-		color.Green("[✔] Wrote %d (found) URLs to %s", len(urls), outputFile)
+		color.Green("[OK] Wrote %d (found) URLs to %s", len(urls), outputFile)
 	}
 }
