@@ -39,7 +39,6 @@ func searchCarTalkCommunity(username string) *string {
 func searchDockerHub(username string) *string {
 	respUrl := "https://hub.docker.com/u/" + username
 	return csAndReturnCustomURL("https://hub.docker.com/v2/users/"+username, 200, &respUrl)
-	//return checkStatusAndReturnUrl("https://hub.docker.com/u/"+username, 200)
 }
 
 func searchPasteBin(username string) *string {
@@ -49,7 +48,6 @@ func searchPasteBin(username string) *string {
 func searchReddit(username string) *string {
 	retUrl := "https://www.reddit.com/user/" + username
 	return csAndReturnCustomURL("https://old.reddit.com/user/"+username, 200, &retUrl)
-	//return checkStatusAndReturnUrl("https://www.reddit.com/user/"+username, 200)
 }
 
 func searchRumble(username string) *string {

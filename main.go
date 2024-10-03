@@ -9,8 +9,8 @@ import (
 
 func showUsage() {
 	color.Red("Usage: go-osint [type] [term] (platform)")
-	color.Yellow("- [type]: \"username\", \"domain\" or \"email\"")
-	color.Yellow("- [term]: The username, domain, or email to search for")
+	color.Yellow("- [type]: \"username\" or \"keywords\"")
+	color.Yellow("- [term]: The [type] to search for")
 	color.Yellow("- (platform): The platform to search for the username on (optional)")
 }
 
