@@ -1,73 +1,97 @@
 # go-osint
-`go-osint` is a lightweight, easy-to-use tool designed for Open Source Intelligence (OSINT) tasks, specifically for username and keyword searches across various platforms. Built in Go and leveraging Go routines for efficiency, this tool serves as a simplified alternative to [Sherlock](https://github.com/sherlock-project/sherlock), making it accessible for users of all skill levels.
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Open Source](https://img.shields.io/badge/Open_Source-green?style=for-the-badge&logo=opensource&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-## Features
+A lightweight, efficient OSINT tool built in Go for username and keyword searches across multiple platforms. Inspired by Sherlock but optimized for simplicity and speed using Go routines.
 
-- **Username Search**: Find usernames across multiple platforms.
-- **Keyword Search**: Discover URLs related to specific keywords.
-- **Output to File**: Easily save search results to a specified output file.
+## 🌟 Features
+- **Username Search**: Find digital footprints across various platforms
+- **Keyword Discovery**: Uncover URLs related to specific search terms
+- **Concurrent Processing**: Leverages Go routines for fast, efficient searches
+- **File Output**: Save search results for later analysis
+- **Platform Specific**: Option to target searches to individual platforms
 
-## Installation
-To get started, clone the repository and build the project:
-
+## 🚀 Quick Start
+1. Clone and build:
 ```bash
 git clone https://github.com/vehbiu/go-osint.git
 cd go-osint
 go build
 ```
 
-## Usage
+2. Run a search:
+```bash
+go-osint username johndoe
+```
 
-### Quick Start
+## 🛠️ Usage Examples
 
-To run `go-osint`, use the following command structure:
-
+### 📋 Command Structure
 ```bash
 go-osint [type] [term] (platform)
 ```
 
-- **`[type]`**: Specify the type of search:
-    - `"username"` for username searches
-    - `"keywords"` for keyword searches
-- **`[term]`**: The username, domain, or email you want to search for.
-- **`(platform)`**: (Optional) Specify the platform to search for the username on.
-
-### Examples
-
-1. **Search for a username across all platforms**:
+### 🔍 Search Types
+1. **All-Platform Username Search**:
    ```bash
    go-osint username johndoe
    ```
 
-2. **Search for a username on a specific platform**:
+2. **Platform-Specific Search**:
    ```bash
    go-osint username johndoe github
    ```
 
-3. **Search for keywords**:
+3. **Keyword Search**:
    ```bash
    go-osint keywords johndoe.22
    ```
 
-4. **Save results to a file**:
+4. **Save Results to File**:
    ```bash
    go-osint username johndoe --output results.txt
    ```
 
-### Output
-Search results will be displayed in the terminal, and if an output file is specified, the results will also be saved there.
+## 📁 Project Structure
+```
+go-osint/
+├── main.go           # Entry point
+├── username/         # Username-specific search functions
+├── keywords/         # Keyword-specific search functions, (currently only google seearches)
+└── README.md         # Documentation
+```
 
-## Contribution
-Contributions are welcome! Feel free to open issues or submit pull requests.
+## ⚙️ Technical Details
+- Built in Go for maximum efficiency
+- Uses Go routines for concurrent searches
+- Platform-specific functions for unique handling
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## 📝 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-`go-osint` is heavily inspired by [Sherlock](https://github.com/sherlock-project/sherlock). Special thanks to the original authors for their work in making OSINT accessible to everyone.
+## 🤝 Contributing
+Contributions are welcome! Feel free to:
+- Open issues
+- Submit pull requests
+- Suggest new platforms to add
 
-The authors or contributors of this project are not responsible for any misuse of the tool. Use responsibly and respect the privacy of others. Do not use this tool for illegal activities.
+## 👤 Author
+**Vehbi**
+- GitHub: [@vehbiu](https://github.com/vehbiu)
 
+## 🔒 Responsible Use
+This tool is for educational purposes only. Users are responsible for ensuring their usage complies with applicable laws and respects privacy.
 
-## Side-note / Rant
-I did not want to be a 1-1 copy of Sherlock, hence, that's why all the platforms have their own functions. Although this is not the greatest feature for abstraction, it was to add a bit of uniqueness to the project. However, it should not matter much due to the nature and size of the project.
+## 🙏 Acknowledgments
+- Inspired by [Sherlock](https://github.com/sherlock-project/sherlock)
+
+## 📊 Stats
+![GitHub stars](https://img.shields.io/github/stars/vehbiu/go-osint?style=social)
+![GitHub forks](https://img.shields.io/github/forks/vehbiu/go-osint?style=social)
+
+## 💭 Developer's Note
+While this project shares similarities with Sherlock, it's different. Rather than copying sherlock, the methods are implemented manually (which can be seen from the abstraction), although not the greatest, it works for such a project.
+
+---
+Made with ❤️ by [@vehbiu](https://github.com/vehbiu)
